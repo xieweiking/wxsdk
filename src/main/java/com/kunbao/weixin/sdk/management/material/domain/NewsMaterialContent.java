@@ -1,7 +1,6 @@
 package com.kunbao.weixin.sdk.management.material.domain;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import lombok.Getter;
 
 import java.util.List;
 
@@ -11,8 +10,16 @@ import java.util.List;
  * "news_item": [{
  * Created by lemon_bar on 15/7/12.
  */
-@Getter
 public class NewsMaterialContent {
     @JsonProperty("news_item")
     private List<NewsItem> newsItem;
+
+    public List<NewsItem> getNewsItem() {
+        return newsItem;
+    }
+
+    public void setNewsItem(List<NewsItem> newsItem) {
+        this.newsItem = newsItem;
+    }
+
 }

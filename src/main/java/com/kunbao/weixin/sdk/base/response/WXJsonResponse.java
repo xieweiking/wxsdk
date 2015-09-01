@@ -1,13 +1,11 @@
 package com.kunbao.weixin.sdk.base.response;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import lombok.Getter;
 
 /**
  * {"errcode":40013,"errmsg":"invalid appid"}
  * Created by lemon_bar on 15/7/7.
  */
-@Getter
 public class WXJsonResponse extends WXResponse {
 
     @JsonProperty("errcode")
@@ -23,4 +21,21 @@ public class WXJsonResponse extends WXResponse {
     public boolean isSuccess() {
         return this.code == 0l;
     }
+
+    public long getCode() {
+        return code;
+    }
+
+    public void setCode(long code) {
+        this.code = code;
+    }
+
+    public String getMsg() {
+        return msg;
+    }
+
+    public void setMsg(String msg) {
+        this.msg = msg;
+    }
+
 }

@@ -1,8 +1,6 @@
 package com.kunbao.weixin.sdk.message.domain.received.common;
 
 import com.kunbao.weixin.sdk.util.xml.XMLCDataAdapter;
-import lombok.Getter;
-import lombok.ToString;
 
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
@@ -24,8 +22,6 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * 对新关注者立刻生效，对已关注用户需要24小时生效。开发者可以重新关注此帐号进行测试）
  * Created by lemon_bar on 15/7/6.
  */
-@Getter
-@ToString(callSuper = true)
 @XmlRootElement(name = "xml")
 public class WXReceivedVoice extends WXReceivedMessage {
     @XmlJavaTypeAdapter(XMLCDataAdapter.class)
@@ -39,4 +35,38 @@ public class WXReceivedVoice extends WXReceivedMessage {
     @XmlJavaTypeAdapter(XMLCDataAdapter.class)
     @XmlElement(name = "Recognition")
     private String recognition;
+
+    public String getMediaId() {
+        return mediaId;
+    }
+
+    public void setMediaId(String mediaId) {
+        this.mediaId = mediaId;
+    }
+
+    public String getFormat() {
+        return format;
+    }
+
+    public void setFormat(String format) {
+        this.format = format;
+    }
+
+    public String getRecognition() {
+        return recognition;
+    }
+
+    public void setRecognition(String recognition) {
+        this.recognition = recognition;
+    }
+
+    @Override
+    public String toString() {
+        return "WXReceivedVoice [mediaId=" + mediaId + ", format=" + format
+                + ", recognition=" + recognition + ", parsedType=" + getParsedType() + ", toUserName="
+                + getToUserName() + ", fromUserName=" + getFromUserName()
+                + ", createTime=" + getCreateTime() + ", msgType="
+                + getMsgType() + "]";
+    }
+
 }

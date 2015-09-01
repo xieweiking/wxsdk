@@ -1,12 +1,10 @@
 package com.kunbao.weixin.sdk.management.user.domain;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import lombok.Getter;
 
 /**
  * Created by lemon_bar on 15/7/24.
  */
-@Getter
 public class WXUserMove {
     @JsonProperty("openid")
     private String openId;
@@ -20,4 +18,21 @@ public class WXUserMove {
 
     protected WXUserMove() {
     }
+
+    public String getOpenId() {
+        return openId;
+    }
+
+    public void setOpenId(String openId) {
+        this.openId = openId;
+    }
+
+    public int getGroupId() {
+        return groupId;
+    }
+
+    public void setGroupId(int groupId) {
+        this.groupId = groupId;
+    }
+
 }

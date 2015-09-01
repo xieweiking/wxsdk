@@ -3,7 +3,6 @@ package com.kunbao.weixin.sdk.management.material.response;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.kunbao.weixin.sdk.base.response.WXJsonResponse;
 import com.kunbao.weixin.sdk.management.material.domain.NewsMaterialItem;
-import lombok.Getter;
 
 import java.util.List;
 
@@ -15,7 +14,6 @@ import java.util.List;
  * "media_id": ME
  * Created by lemon_bar on 15/7/12.
  */
-@Getter
 public class WXGetNewsMaterialListResponse extends WXJsonResponse {
     @JsonProperty("total_count")
     private int totalCount;
@@ -23,4 +21,29 @@ public class WXGetNewsMaterialListResponse extends WXJsonResponse {
     private int itemCount;
     @JsonProperty("item")
     private List<NewsMaterialItem> items;
+
+    public int getTotalCount() {
+        return totalCount;
+    }
+
+    public void setTotalCount(int totalCount) {
+        this.totalCount = totalCount;
+    }
+
+    public int getItemCount() {
+        return itemCount;
+    }
+
+    public void setItemCount(int itemCount) {
+        this.itemCount = itemCount;
+    }
+
+    public List<NewsMaterialItem> getItems() {
+        return items;
+    }
+
+    public void setItems(List<NewsMaterialItem> items) {
+        this.items = items;
+    }
+
 }

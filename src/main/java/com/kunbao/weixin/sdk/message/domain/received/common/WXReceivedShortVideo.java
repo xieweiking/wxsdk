@@ -1,8 +1,6 @@
 package com.kunbao.weixin.sdk.message.domain.received.common;
 
 import com.kunbao.weixin.sdk.util.xml.XMLCDataAdapter;
-import lombok.Getter;
-import lombok.ToString;
 
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
@@ -20,8 +18,6 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * </xml>
  * Created by lemon_bar on 15/7/6.
  */
-@Getter
-@ToString(callSuper = true)
 @XmlRootElement(name = "xml")
 public class WXReceivedShortVideo extends WXReceivedMessage {
     @XmlJavaTypeAdapter(XMLCDataAdapter.class)
@@ -31,4 +27,30 @@ public class WXReceivedShortVideo extends WXReceivedMessage {
     @XmlJavaTypeAdapter(XMLCDataAdapter.class)
     @XmlElement(name = "ThumbMediaId")
     private String thumbMediaId;
+
+    public String getMediaId() {
+        return mediaId;
+    }
+
+    public void setMediaId(String mediaId) {
+        this.mediaId = mediaId;
+    }
+
+    public String getThumbMediaId() {
+        return thumbMediaId;
+    }
+
+    public void setThumbMediaId(String thumbMediaId) {
+        this.thumbMediaId = thumbMediaId;
+    }
+
+    @Override
+    public String toString() {
+        return "WXReceivedShortVideo [mediaId=" + mediaId + ", thumbMediaId="
+                + thumbMediaId + ", parsedType=" + getParsedType() + ", toUserName="
+                + getToUserName() + ", fromUserName=" + getFromUserName()
+                + ", createTime=" + getCreateTime() + ", msgType="
+                + getMsgType() + "]";
+    }
+
 }

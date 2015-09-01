@@ -1,7 +1,6 @@
 package com.kunbao.weixin.sdk.message.domain.send.json.metadata;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import lombok.Getter;
 
 /**
  * {
@@ -12,7 +11,6 @@ import lombok.Getter;
  * },
  * Created by lemon_bar on 15/7/23.
  */
-@Getter
 public class NewsItemContent {
     @JsonProperty("title")
     private String title;
@@ -32,4 +30,37 @@ public class NewsItemContent {
         this.url = url;
         this.picUrl = picUrl;
     }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public String getUrl() {
+        return url;
+    }
+
+    public void setUrl(String url) {
+        this.url = url;
+    }
+
+    public String getPicUrl() {
+        return picUrl;
+    }
+
+    public void setPicUrl(String picUrl) {
+        this.picUrl = picUrl;
+    }
+
 }

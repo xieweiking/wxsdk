@@ -1,7 +1,6 @@
 package com.kunbao.weixin.sdk.message.domain.send.json.metadata;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import lombok.Getter;
 
 /**
  * "media_id":"MEDIA_ID",
@@ -10,7 +9,6 @@ import lombok.Getter;
  * "description":"DESCRIPTION"
  * Created by lemon_bar on 15/7/23.
  */
-@Getter
 public class VideoContent extends MediaContent {
 
     @JsonProperty("thumb_media_id")
@@ -28,4 +26,29 @@ public class VideoContent extends MediaContent {
         this.title = title;
         this.description = description;
     }
+
+    public String getThumbMediaId() {
+        return thumbMediaId;
+    }
+
+    public void setThumbMediaId(String thumbMediaId) {
+        this.thumbMediaId = thumbMediaId;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
 }

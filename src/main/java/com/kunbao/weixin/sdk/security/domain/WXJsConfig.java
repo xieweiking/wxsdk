@@ -3,7 +3,6 @@ package com.kunbao.weixin.sdk.security.domain;
 import com.kunbao.weixin.sdk.base.domain.constant.WXAppConstant;
 import com.kunbao.weixin.sdk.util.UUIDUtil;
 import com.kunbao.weixin.sdk.util.WXSignatureUtil;
-import lombok.Getter;
 
 import java.util.UUID;
 
@@ -18,7 +17,6 @@ import java.util.UUID;
  * });
  * Created by lemon_bar on 15/8/30.
  */
-@Getter
 public class WXJsConfig {
     private String appId;
     private String timestamp;
@@ -43,4 +41,53 @@ public class WXJsConfig {
     private String create_timestamp() {
         return Long.toString(System.currentTimeMillis() / 1000);
     }
+
+    public String getAppId() {
+        return appId;
+    }
+
+    public void setAppId(String appId) {
+        this.appId = appId;
+    }
+
+    public String getTimestamp() {
+        return timestamp;
+    }
+
+    public void setTimestamp(String timestamp) {
+        this.timestamp = timestamp;
+    }
+
+    public String getNonceStr() {
+        return nonceStr;
+    }
+
+    public void setNonceStr(String nonceStr) {
+        this.nonceStr = nonceStr;
+    }
+
+    public String getSignature() {
+        return signature;
+    }
+
+    public void setSignature(String signature) {
+        this.signature = signature;
+    }
+
+    public String getUrl() {
+        return url;
+    }
+
+    public void setUrl(String url) {
+        this.url = url;
+    }
+
+    public String getJsapiTicket() {
+        return jsapiTicket;
+    }
+
+    public void setJsapiTicket(String jsapiTicket) {
+        this.jsapiTicket = jsapiTicket;
+    }
+
 }

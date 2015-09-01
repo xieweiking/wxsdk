@@ -2,8 +2,6 @@ package com.kunbao.weixin.sdk.message.domain.base;
 
 import com.kunbao.weixin.sdk.message.domain.constant.WXMessageType;
 import com.kunbao.weixin.sdk.util.xml.XMLCDataAdapter;
-import lombok.Getter;
-import lombok.ToString;
 
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
@@ -12,8 +10,6 @@ import java.util.Date;
 /**
  * Created by lemon_bar on 15/7/1.
  */
-@Getter
-@ToString
 public class WXMessageBase {
     //开发者微信号
     @XmlJavaTypeAdapter(XMLCDataAdapter.class)
@@ -44,4 +40,44 @@ public class WXMessageBase {
         this.msgType = msgType;
         this.createTime = (new Date()).getTime() / 1000l;
     }
+
+    public String getToUserName() {
+        return toUserName;
+    }
+
+    public void setToUserName(String toUserName) {
+        this.toUserName = toUserName;
+    }
+
+    public String getFromUserName() {
+        return fromUserName;
+    }
+
+    public void setFromUserName(String fromUserName) {
+        this.fromUserName = fromUserName;
+    }
+
+    public long getCreateTime() {
+        return createTime;
+    }
+
+    public void setCreateTime(long createTime) {
+        this.createTime = createTime;
+    }
+
+    public String getMsgType() {
+        return msgType;
+    }
+
+    public void setMsgType(String msgType) {
+        this.msgType = msgType;
+    }
+
+    @Override
+    public String toString() {
+        return "WXMessageBase [toUserName=" + toUserName + ", fromUserName="
+                + fromUserName + ", createTime=" + createTime + ", msgType="
+                + msgType + "]";
+    }
+
 }

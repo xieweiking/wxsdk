@@ -1,8 +1,6 @@
 package com.kunbao.weixin.sdk.message.domain.received.event;
 
 import com.kunbao.weixin.sdk.util.xml.XMLCDataAdapter;
-import lombok.Getter;
-import lombok.ToString;
 
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
@@ -20,8 +18,6 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * </xml>
  * Created by lemon_bar on 15/7/30.
  */
-@Getter
-@ToString(callSuper = true)
 @XmlRootElement(name = "xml")
 public class WXReceivedTemplateSendFinishEvent extends WXReceivedEvent {
     @XmlElement(name = "MsgID")
@@ -30,4 +26,30 @@ public class WXReceivedTemplateSendFinishEvent extends WXReceivedEvent {
     @XmlJavaTypeAdapter(XMLCDataAdapter.class)
     @XmlElement(name = "Status")
     private String status;
+
+    public String getMsgId() {
+        return msgId;
+    }
+
+    public void setMsgId(String msgId) {
+        this.msgId = msgId;
+    }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
+    }
+
+    @Override
+    public String toString() {
+        return "WXReceivedTemplateSendFinishEvent [msgId=" + msgId
+                + ", status=" + status + ", event=" + getEvent() + ", parsedType=" + getParsedType() + ", toUserName="
+                + getToUserName() + ", fromUserName=" + getFromUserName()
+                + ", createTime=" + getCreateTime() + ", msgType="
+                + getMsgType() + "]";
+    }
+
 }

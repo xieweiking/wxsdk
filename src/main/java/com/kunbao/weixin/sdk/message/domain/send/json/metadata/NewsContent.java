@@ -1,7 +1,6 @@
 package com.kunbao.weixin.sdk.message.domain.send.json.metadata;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import lombok.Getter;
 
 import java.util.List;
 
@@ -22,12 +21,19 @@ import java.util.List;
  * ]
  * Created by lemon_bar on 15/7/23.
  */
-@Getter
 public class NewsContent {
     @JsonProperty("articles")
     private List<NewsItemContent> articles;
 
     public NewsContent(List<NewsItemContent> articles) {
+        this.articles = articles;
+    }
+
+    public List<NewsItemContent> getArticles() {
+        return articles;
+    }
+
+    public void setArticles(List<NewsItemContent> articles) {
         this.articles = articles;
     }
 

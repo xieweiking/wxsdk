@@ -5,7 +5,6 @@ import com.kunbao.weixin.sdk.base.exception.WXException;
 import com.kunbao.weixin.sdk.jsapiticket.request.WXJsapiTicketRequest;
 import com.kunbao.weixin.sdk.jsapiticket.response.WXJsapiTicketResponse;
 import com.kunbao.weixin.sdk.token.WXTokenController;
-import lombok.Data;
 
 import java.util.Date;
 
@@ -39,7 +38,6 @@ public class WXJsapiTicketController {
         return jsTicket.getTicket();
     }
 
-    @Data
     private static class JsapiTicket {
         private String ticket;
         private long expires_in;
@@ -53,5 +51,30 @@ public class WXJsapiTicketController {
             long seconds = remainingTime / 1000;
             return seconds < 10 * 60;
         }
+
+        public String getTicket() {
+            return ticket;
+        }
+
+        public void setTicket(String ticket) {
+            this.ticket = ticket;
+        }
+
+        public long getExpires_in() {
+            return expires_in;
+        }
+
+        public void setExpires_in(long expires_in) {
+            this.expires_in = expires_in;
+        }
+
+        public Date getCreateDate() {
+            return createDate;
+        }
+
+        public void setCreateDate(Date createDate) {
+            this.createDate = createDate;
+        }
+
     }
 }

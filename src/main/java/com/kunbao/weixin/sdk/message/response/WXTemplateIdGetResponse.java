@@ -2,7 +2,6 @@ package com.kunbao.weixin.sdk.message.response;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.kunbao.weixin.sdk.base.response.WXJsonResponse;
-import lombok.Getter;
 
 /**
  * {
@@ -12,8 +11,16 @@ import lombok.Getter;
  * }
  * Created by lemon_bar on 15/7/30.
  */
-@Getter
 public class WXTemplateIdGetResponse extends WXJsonResponse {
     @JsonProperty("template_id")
     private String templateId;
+
+    public String getTemplateId() {
+        return templateId;
+    }
+
+    public void setTemplateId(String templateId) {
+        this.templateId = templateId;
+    }
+
 }

@@ -1,7 +1,6 @@
 package com.kunbao.weixin.sdk.management.account.domain;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import lombok.Getter;
 
 /**
  * 参数	是否必须	说明
@@ -10,7 +9,6 @@ import lombok.Getter;
  * long_url	是	需要转换的长链接，支持http://、https://、weixin://wxpay 格式的url
  * Created by lemon_bar on 15/7/10.
  */
-@Getter
 public class Long2ShortAction {
     @JsonProperty("action")
     protected String action;
@@ -21,4 +19,21 @@ public class Long2ShortAction {
         this.action = "long2short";
         this.longUrl = longUrl;
     }
+
+    public String getAction() {
+        return action;
+    }
+
+    public void setAction(String action) {
+        this.action = action;
+    }
+
+    public String getLongUrl() {
+        return longUrl;
+    }
+
+    public void setLongUrl(String longUrl) {
+        this.longUrl = longUrl;
+    }
+
 }

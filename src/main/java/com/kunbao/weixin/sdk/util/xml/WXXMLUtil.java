@@ -2,12 +2,12 @@ package com.kunbao.weixin.sdk.util.xml;
 
 import com.kunbao.weixin.sdk.base.exception.WXException;
 import com.sun.xml.bind.marshaller.CharacterEscapeHandler;
-import lombok.extern.slf4j.Slf4j;
 
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;
 import javax.xml.bind.Marshaller;
 import javax.xml.bind.Unmarshaller;
+
 import java.io.*;
 
 /**
@@ -16,6 +16,7 @@ import java.io.*;
 public class WXXMLUtil {
     private final static String DEFAULT_ENCODING_CHARACTER = "UTF-8";
 
+    @SuppressWarnings("unchecked")
     public static <T> T xmlToBean(String xmlStr, Class<T> beanClass) throws WXException {
         Reader reader = new StringReader(xmlStr);
         Unmarshaller unmarshaller;

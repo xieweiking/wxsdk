@@ -2,7 +2,6 @@ package com.kunbao.weixin.sdk.management.material.domain;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.kunbao.weixin.sdk.management.material.domain.constant.MaterialType;
-import lombok.Getter;
 
 /**
  * {
@@ -12,7 +11,6 @@ import lombok.Getter;
  * }
  * Created by lemon_bar on 15/7/12.
  */
-@Getter
 public class MaterialPageableRequest {
     @JsonProperty("type")
     private MaterialType type;
@@ -26,4 +24,29 @@ public class MaterialPageableRequest {
         this.offset = offset;
         this.count = count;
     }
+
+    public MaterialType getType() {
+        return type;
+    }
+
+    public void setType(MaterialType type) {
+        this.type = type;
+    }
+
+    public int getOffset() {
+        return offset;
+    }
+
+    public void setOffset(int offset) {
+        this.offset = offset;
+    }
+
+    public int getCount() {
+        return count;
+    }
+
+    public void setCount(int count) {
+        this.count = count;
+    }
+
 }

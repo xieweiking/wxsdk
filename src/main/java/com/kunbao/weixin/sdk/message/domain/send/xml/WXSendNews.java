@@ -2,8 +2,6 @@ package com.kunbao.weixin.sdk.message.domain.send.xml;
 
 import com.kunbao.weixin.sdk.message.domain.base.WXMessageBase;
 import com.kunbao.weixin.sdk.message.domain.constant.WXMessageType;
-import lombok.Getter;
-import lombok.ToString;
 
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
@@ -20,8 +18,6 @@ import java.util.List;
  * <item>
  * Created by lemon_bar on 15/7/23.
  */
-@Getter
-@ToString(callSuper = true)
 @XmlRootElement(name = "xml")
 public class WXSendNews extends WXMessageBase {
     @XmlElement(name = "ArticleCount")
@@ -39,4 +35,29 @@ public class WXSendNews extends WXMessageBase {
         this.articleCount = articles.size();
         this.articles = articles;
     }
+
+    public int getArticleCount() {
+        return articleCount;
+    }
+
+    public void setArticleCount(int articleCount) {
+        this.articleCount = articleCount;
+    }
+
+    public List<WXSendNewsItem> getArticles() {
+        return articles;
+    }
+
+    public void setArticles(List<WXSendNewsItem> articles) {
+        this.articles = articles;
+    }
+
+    @Override
+    public String toString() {
+        return "WXSendNews [articleCount=" + articleCount + ", articles="
+                + articles + ", toUserName=" + getToUserName() + ", fromUserName="
+                + getFromUserName() + ", createTime=" + getCreateTime() + ", msgType="
+                + getMsgType() + "]";
+    }
+
 }

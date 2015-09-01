@@ -1,7 +1,6 @@
 package com.kunbao.weixin.sdk.datacube.article.domain;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import lombok.Getter;
 
 /**
  * {
@@ -19,7 +18,6 @@ import lombok.Getter;
  * }
  * Created by lemon_bar on 15/7/29.
  */
-@Getter
 public class ArticleData {
     @JsonProperty("ref_date")
     private String refDate;
@@ -43,4 +41,93 @@ public class ArticleData {
     private long favUserCount;
     @JsonProperty("add_to_fav_count")
     private long favCount;
+
+    public String getRefDate() {
+        return refDate;
+    }
+
+    public void setRefDate(String refDate) {
+        this.refDate = refDate;
+    }
+
+    public String getMsgId() {
+        return msgId;
+    }
+
+    public void setMsgId(String msgId) {
+        this.msgId = msgId;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public long getReadUserCount() {
+        return readUserCount;
+    }
+
+    public void setReadUserCount(long readUserCount) {
+        this.readUserCount = readUserCount;
+    }
+
+    public long getReadCount() {
+        return readCount;
+    }
+
+    public void setReadCount(long readCount) {
+        this.readCount = readCount;
+    }
+
+    public long getReadOriUserCount() {
+        return readOriUserCount;
+    }
+
+    public void setReadOriUserCount(long readOriUserCount) {
+        this.readOriUserCount = readOriUserCount;
+    }
+
+    public long getReadOriCount() {
+        return readOriCount;
+    }
+
+    public void setReadOriCount(long readOriCount) {
+        this.readOriCount = readOriCount;
+    }
+
+    public long getShareUserCount() {
+        return shareUserCount;
+    }
+
+    public void setShareUserCount(long shareUserCount) {
+        this.shareUserCount = shareUserCount;
+    }
+
+    public long getShareCount() {
+        return shareCount;
+    }
+
+    public void setShareCount(long shareCount) {
+        this.shareCount = shareCount;
+    }
+
+    public long getFavUserCount() {
+        return favUserCount;
+    }
+
+    public void setFavUserCount(long favUserCount) {
+        this.favUserCount = favUserCount;
+    }
+
+    public long getFavCount() {
+        return favCount;
+    }
+
+    public void setFavCount(long favCount) {
+        this.favCount = favCount;
+    }
+
 }

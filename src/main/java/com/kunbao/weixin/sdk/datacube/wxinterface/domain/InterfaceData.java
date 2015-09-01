@@ -1,7 +1,6 @@
 package com.kunbao.weixin.sdk.datacube.wxinterface.domain;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import lombok.Getter;
 
 /**
  * {
@@ -13,7 +12,6 @@ import lombok.Getter;
  * }
  * Created by lemon_bar on 15/7/29.
  */
-@Getter
 public class InterfaceData {
     @JsonProperty("ref_date")
     private String refDate;
@@ -25,4 +23,45 @@ public class InterfaceData {
     private long totalTimeCost;
     @JsonProperty("max_time_cost")
     private long maxTimeCost;
+
+    public String getRefDate() {
+        return refDate;
+    }
+
+    public void setRefDate(String refDate) {
+        this.refDate = refDate;
+    }
+
+    public long getCallbackCount() {
+        return callbackCount;
+    }
+
+    public void setCallbackCount(long callbackCount) {
+        this.callbackCount = callbackCount;
+    }
+
+    public long getFailCount() {
+        return failCount;
+    }
+
+    public void setFailCount(long failCount) {
+        this.failCount = failCount;
+    }
+
+    public long getTotalTimeCost() {
+        return totalTimeCost;
+    }
+
+    public void setTotalTimeCost(long totalTimeCost) {
+        this.totalTimeCost = totalTimeCost;
+    }
+
+    public long getMaxTimeCost() {
+        return maxTimeCost;
+    }
+
+    public void setMaxTimeCost(long maxTimeCost) {
+        this.maxTimeCost = maxTimeCost;
+    }
+
 }

@@ -2,13 +2,11 @@ package com.kunbao.weixin.sdk.management.account.domain;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.kunbao.weixin.sdk.management.account.domain.constant.QrCodeType;
-import lombok.Getter;
 
 /**
  * POST数据例子：{"expire_seconds": 604800, "action_name": "QR_SCENE", "action_info": {"scene": {"scene_id": 123}}}
  * Created by lemon_bar on 15/7/10.
  */
-@Getter
 public class QrCode {
     @JsonProperty("expire_seconds")
     private Long expireSeconds;
@@ -42,4 +40,29 @@ public class QrCode {
         limitStrQrCode.actionInfo = new QrCodeActionInfo(new QrScene(sceneStr));
         return limitStrQrCode;
     }
+
+    public Long getExpireSeconds() {
+        return expireSeconds;
+    }
+
+    public void setExpireSeconds(Long expireSeconds) {
+        this.expireSeconds = expireSeconds;
+    }
+
+    public QrCodeType getType() {
+        return type;
+    }
+
+    public void setType(QrCodeType type) {
+        this.type = type;
+    }
+
+    public QrCodeActionInfo getActionInfo() {
+        return actionInfo;
+    }
+
+    public void setActionInfo(QrCodeActionInfo actionInfo) {
+        this.actionInfo = actionInfo;
+    }
+
 }

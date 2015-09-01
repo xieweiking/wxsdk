@@ -1,7 +1,6 @@
 package com.kunbao.weixin.sdk.management.user.domain;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import lombok.Getter;
 
 /**
  * {
@@ -12,7 +11,6 @@ import lombok.Getter;
  * }
  * Created by lemon_bar on 15/7/23.
  */
-@Getter
 public class WXUserGroup {
     @JsonProperty("id")
     private Integer id;
@@ -44,4 +42,29 @@ public class WXUserGroup {
         this();
         this.id = id;
     }
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public Integer getCount() {
+        return count;
+    }
+
+    public void setCount(Integer count) {
+        this.count = count;
+    }
+
 }

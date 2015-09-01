@@ -1,7 +1,6 @@
 package com.kunbao.weixin.sdk.message.domain.template;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import lombok.Getter;
 
 /**
  * IT科技	互联网/电子商务	1
@@ -47,7 +46,6 @@ import lombok.Getter;
  * 其它	其它	41
  * Created by lemon_bar on 15/7/30.
  */
-@Getter
 public class Industry {
     @JsonProperty("industry_id1")
     private String id1;
@@ -61,4 +59,21 @@ public class Industry {
         this.id1 = industryId1;
         this.id2 = industryId2;
     }
+
+    public String getId1() {
+        return id1;
+    }
+
+    public void setId1(String id1) {
+        this.id1 = id1;
+    }
+
+    public String getId2() {
+        return id2;
+    }
+
+    public void setId2(String id2) {
+        this.id2 = id2;
+    }
+
 }

@@ -1,8 +1,5 @@
 package com.kunbao.weixin.sdk.message.domain.received.event;
 
-import lombok.Getter;
-import lombok.ToString;
-
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 
@@ -19,8 +16,6 @@ import javax.xml.bind.annotation.XmlRootElement;
  * </xml>
  * Created by lemon_bar on 15/7/6.
  */
-@Getter
-@ToString(callSuper = true)
 @XmlRootElement(name = "xml")
 public class WXReceivedLocationEvent extends WXReceivedEvent {
     @XmlElement(name = "Latitude")
@@ -31,4 +26,38 @@ public class WXReceivedLocationEvent extends WXReceivedEvent {
 
     @XmlElement(name = "Precision")
     private double precision;
+
+    public double getLatitude() {
+        return latitude;
+    }
+
+    public void setLatitude(double latitude) {
+        this.latitude = latitude;
+    }
+
+    public double getLongitude() {
+        return longitude;
+    }
+
+    public void setLongitude(double longitude) {
+        this.longitude = longitude;
+    }
+
+    public double getPrecision() {
+        return precision;
+    }
+
+    public void setPrecision(double precision) {
+        this.precision = precision;
+    }
+
+    @Override
+    public String toString() {
+        return "WXReceivedLocationEvent [latitude=" + latitude + ", longitude="
+                + longitude + ", precision=" + precision + ", event=" + getEvent() + ", parsedType=" + getParsedType() + ", toUserName="
+                + getToUserName() + ", fromUserName=" + getFromUserName()
+                + ", createTime=" + getCreateTime() + ", msgType="
+                + getMsgType() + "]";
+    }
+
 }

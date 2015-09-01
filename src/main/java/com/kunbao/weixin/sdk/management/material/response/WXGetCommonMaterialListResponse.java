@@ -3,7 +3,6 @@ package com.kunbao.weixin.sdk.management.material.response;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.kunbao.weixin.sdk.base.response.WXJsonResponse;
 import com.kunbao.weixin.sdk.management.material.domain.CommonMaterialItem;
-import lombok.Getter;
 
 import java.util.List;
 
@@ -22,7 +21,6 @@ import java.util.List;
  * }
  * Created by lemon_bar on 15/7/12.
  */
-@Getter
 public class WXGetCommonMaterialListResponse extends WXJsonResponse {
     @JsonProperty("total_count")
     private int totalCount;
@@ -30,4 +28,29 @@ public class WXGetCommonMaterialListResponse extends WXJsonResponse {
     private int itemCount;
     @JsonProperty("item")
     private List<CommonMaterialItem> items;
+
+    public int getTotalCount() {
+        return totalCount;
+    }
+
+    public void setTotalCount(int totalCount) {
+        this.totalCount = totalCount;
+    }
+
+    public int getItemCount() {
+        return itemCount;
+    }
+
+    public void setItemCount(int itemCount) {
+        this.itemCount = itemCount;
+    }
+
+    public List<CommonMaterialItem> getItems() {
+        return items;
+    }
+
+    public void setItems(List<CommonMaterialItem> items) {
+        this.items = items;
+    }
+
 }

@@ -1,9 +1,7 @@
 package com.kunbao.weixin.sdk.management.oauth2.response;
 
-
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.kunbao.weixin.sdk.base.response.WXJsonResponse;
-import lombok.Getter;
 
 /**
  * Created by baylor on 15/7/25.
@@ -29,7 +27,6 @@ import lombok.Getter;
  * <p/>
  * refresh_token拥有较长的有效期（7天、30天、60天、90天），当refresh_token失效的后，需要用户重新授权。
  */
-@Getter
 public class WXOAuthTokenGetResponse extends WXJsonResponse {
     @JsonProperty("access_token")
     private String accessToken;
@@ -48,4 +45,53 @@ public class WXOAuthTokenGetResponse extends WXJsonResponse {
 
     @JsonProperty("scope")
     private String scope;
+
+    public String getAccessToken() {
+        return accessToken;
+    }
+
+    public void setAccessToken(String accessToken) {
+        this.accessToken = accessToken;
+    }
+
+    public long getExpires() {
+        return expires;
+    }
+
+    public void setExpires(long expires) {
+        this.expires = expires;
+    }
+
+    public String getRefreshToken() {
+        return refreshToken;
+    }
+
+    public void setRefreshToken(String refreshToken) {
+        this.refreshToken = refreshToken;
+    }
+
+    public String getOpenId() {
+        return openId;
+    }
+
+    public void setOpenId(String openId) {
+        this.openId = openId;
+    }
+
+    public String getUnionId() {
+        return unionId;
+    }
+
+    public void setUnionId(String unionId) {
+        this.unionId = unionId;
+    }
+
+    public String getScope() {
+        return scope;
+    }
+
+    public void setScope(String scope) {
+        this.scope = scope;
+    }
+
 }

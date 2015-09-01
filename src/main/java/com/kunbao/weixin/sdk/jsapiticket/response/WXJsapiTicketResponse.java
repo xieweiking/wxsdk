@@ -2,7 +2,6 @@ package com.kunbao.weixin.sdk.jsapiticket.response;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.kunbao.weixin.sdk.base.response.WXJsonResponse;
-import lombok.Getter;
 
 /**
  * {
@@ -13,7 +12,6 @@ import lombok.Getter;
  * }
  * Created by lemon_bar on 15/8/30.
  */
-@Getter
 public class WXJsapiTicketResponse extends WXJsonResponse {
     @JsonProperty("ticket")
     private String ticket;
@@ -24,4 +22,21 @@ public class WXJsapiTicketResponse extends WXJsonResponse {
     public WXJsapiTicketResponse() {
         super();
     }
+
+    public String getTicket() {
+        return ticket;
+    }
+
+    public void setTicket(String ticket) {
+        this.ticket = ticket;
+    }
+
+    public long getExpires() {
+        return expires;
+    }
+
+    public void setExpires(long expires) {
+        this.expires = expires;
+    }
+
 }

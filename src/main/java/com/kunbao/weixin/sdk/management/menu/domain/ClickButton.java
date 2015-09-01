@@ -3,12 +3,10 @@ package com.kunbao.weixin.sdk.management.menu.domain;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.kunbao.weixin.sdk.base.exception.WXException;
 import com.kunbao.weixin.sdk.util.WXJsonUtil;
-import lombok.Getter;
 
 /**
  * Created by lemon_bar on 15/7/7.
  */
-@Getter
 public class ClickButton extends Button {
     @JsonProperty("key")
     private String key;
@@ -22,4 +20,13 @@ public class ClickButton extends Button {
     public String toJson() throws WXException {
         return WXJsonUtil.beanToJson(this);
     }
+
+    public String getKey() {
+        return key;
+    }
+
+    public void setKey(String key) {
+        this.key = key;
+    }
+
 }

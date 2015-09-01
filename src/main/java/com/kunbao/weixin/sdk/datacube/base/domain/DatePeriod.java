@@ -2,7 +2,6 @@ package com.kunbao.weixin.sdk.datacube.base.domain;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.kunbao.weixin.sdk.base.exception.WXException;
-import lombok.Getter;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -14,7 +13,6 @@ import java.util.Date;
  * }
  * Created by lemon_bar on 15/7/27.
  */
-@Getter
 public class DatePeriod {
     @JsonProperty("begin_date")
     private String begin;
@@ -36,4 +34,21 @@ public class DatePeriod {
         this.begin = dateFormat.format(start);
         this.end = dateFormat.format(end);
     }
+
+    public String getBegin() {
+        return begin;
+    }
+
+    public void setBegin(String begin) {
+        this.begin = begin;
+    }
+
+    public String getEnd() {
+        return end;
+    }
+
+    public void setEnd(String end) {
+        this.end = end;
+    }
+
 }

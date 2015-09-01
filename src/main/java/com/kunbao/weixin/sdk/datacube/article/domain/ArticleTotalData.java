@@ -1,7 +1,6 @@
 package com.kunbao.weixin.sdk.datacube.article.domain;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import lombok.Getter;
 
 import java.util.List;
 
@@ -13,7 +12,6 @@ import java.util.List;
  * {
  * Created by lemon_bar on 15/7/29.
  */
-@Getter
 public class ArticleTotalData {
     @JsonProperty("ref_date")
     private String refDate;
@@ -23,4 +21,37 @@ public class ArticleTotalData {
     private String title;
     @JsonProperty("details")
     private List<ArticleTotalDataDetail> details;
+
+    public String getRefDate() {
+        return refDate;
+    }
+
+    public void setRefDate(String refDate) {
+        this.refDate = refDate;
+    }
+
+    public String getMsgId() {
+        return msgId;
+    }
+
+    public void setMsgId(String msgId) {
+        this.msgId = msgId;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public List<ArticleTotalDataDetail> getDetails() {
+        return details;
+    }
+
+    public void setDetails(List<ArticleTotalDataDetail> details) {
+        this.details = details;
+    }
+
 }

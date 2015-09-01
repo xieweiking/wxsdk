@@ -1,7 +1,6 @@
 package com.kunbao.weixin.sdk.datacube.message.domain;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import lombok.Getter;
 
 /**
  * {
@@ -12,7 +11,6 @@ import lombok.Getter;
  * }
  * Created by lemon_bar on 15/7/29.
  */
-@Getter
 public class UpstreamMsgData {
     @JsonProperty("ref_date")
     private String refDate;
@@ -22,4 +20,37 @@ public class UpstreamMsgData {
     private long msgUserCount;
     @JsonProperty("msg_count")
     private long msgCount;
+
+    public String getRefDate() {
+        return refDate;
+    }
+
+    public void setRefDate(String refDate) {
+        this.refDate = refDate;
+    }
+
+    public int getMsgType() {
+        return msgType;
+    }
+
+    public void setMsgType(int msgType) {
+        this.msgType = msgType;
+    }
+
+    public long getMsgUserCount() {
+        return msgUserCount;
+    }
+
+    public void setMsgUserCount(long msgUserCount) {
+        this.msgUserCount = msgUserCount;
+    }
+
+    public long getMsgCount() {
+        return msgCount;
+    }
+
+    public void setMsgCount(long msgCount) {
+        this.msgCount = msgCount;
+    }
+
 }
